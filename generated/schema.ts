@@ -19,6 +19,7 @@ export class ReseveRecord extends Entity {
     this.set("reserve0", Value.fromBigInt(BigInt.zero()));
     this.set("reserve1", Value.fromBigInt(BigInt.zero()));
     this.set("timestamp", Value.fromBigInt(BigInt.zero()));
+    this.set("timestamp2", Value.fromBigInt(BigInt.zero()));
   }
 
   save(): void {
@@ -73,6 +74,15 @@ export class ReseveRecord extends Entity {
   set timestamp(value: BigInt) {
     this.set("timestamp", Value.fromBigInt(value));
   }
+
+  get timestamp2(): BigInt {
+    let value = this.get("timestamp2");
+    return value!.toBigInt();
+  }
+
+  set timestamp2(value: BigInt) {
+    this.set("timestamp2", Value.fromBigInt(value));
+  }
 }
 
 export class MintRecord extends Entity {
@@ -84,6 +94,7 @@ export class MintRecord extends Entity {
     this.set("amount0", Value.fromBigInt(BigInt.zero()));
     this.set("amount1", Value.fromBigInt(BigInt.zero()));
     this.set("timestamp", Value.fromBigInt(BigInt.zero()));
+    this.set("timestamp2", Value.fromBigInt(BigInt.zero()));
   }
 
   save(): void {
@@ -147,6 +158,15 @@ export class MintRecord extends Entity {
   set timestamp(value: BigInt) {
     this.set("timestamp", Value.fromBigInt(value));
   }
+
+  get timestamp2(): BigInt {
+    let value = this.get("timestamp2");
+    return value!.toBigInt();
+  }
+
+  set timestamp2(value: BigInt) {
+    this.set("timestamp2", Value.fromBigInt(value));
+  }
 }
 
 export class BurnRecord extends Entity {
@@ -159,6 +179,7 @@ export class BurnRecord extends Entity {
     this.set("amount1", Value.fromBigInt(BigInt.zero()));
     this.set("to", Value.fromBytes(Bytes.empty()));
     this.set("timestamp", Value.fromBigInt(BigInt.zero()));
+    this.set("timestamp2", Value.fromBigInt(BigInt.zero()));
   }
 
   save(): void {
@@ -231,6 +252,15 @@ export class BurnRecord extends Entity {
   set timestamp(value: BigInt) {
     this.set("timestamp", Value.fromBigInt(value));
   }
+
+  get timestamp2(): BigInt {
+    let value = this.get("timestamp2");
+    return value!.toBigInt();
+  }
+
+  set timestamp2(value: BigInt) {
+    this.set("timestamp2", Value.fromBigInt(value));
+  }
 }
 
 export class SwapRecord extends Entity {
@@ -245,6 +275,7 @@ export class SwapRecord extends Entity {
     this.set("amount1Out", Value.fromBigInt(BigInt.zero()));
     this.set("to", Value.fromBytes(Bytes.empty()));
     this.set("timestamp", Value.fromBigInt(BigInt.zero()));
+    this.set("timestamp2", Value.fromBigInt(BigInt.zero()));
   }
 
   save(): void {
@@ -334,5 +365,14 @@ export class SwapRecord extends Entity {
 
   set timestamp(value: BigInt) {
     this.set("timestamp", Value.fromBigInt(value));
+  }
+
+  get timestamp2(): BigInt {
+    let value = this.get("timestamp2");
+    return value!.toBigInt();
+  }
+
+  set timestamp2(value: BigInt) {
+    this.set("timestamp2", Value.fromBigInt(value));
   }
 }

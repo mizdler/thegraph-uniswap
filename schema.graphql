@@ -3,6 +3,7 @@ type ReseveRecord @entity {
   reserve0: BigInt!
   reserve1: BigInt!
   timestamp: BigInt!
+  timestamp2: BigInt!
 }
 
 type MintRecord @entity {
@@ -11,6 +12,7 @@ type MintRecord @entity {
   amount0: BigInt!
   amount1: BigInt!
   timestamp: BigInt!
+  timestamp2: BigInt!
 }
 
 type BurnRecord @entity {
@@ -20,6 +22,7 @@ type BurnRecord @entity {
   amount1: BigInt!
   to: Bytes!
   timestamp: BigInt!
+  timestamp2: BigInt!
 }
 
 type SwapRecord @entity {
@@ -31,4 +34,5 @@ type SwapRecord @entity {
   amount1Out: BigInt!
   to: Bytes!
   timestamp: BigInt!
+  timestamp2: BigInt!
 }
